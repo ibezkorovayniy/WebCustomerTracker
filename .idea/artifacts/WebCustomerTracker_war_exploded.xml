@@ -39,6 +39,8 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-tx:5.0.6.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-web:5.0.6.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.0.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aspects:5.0.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.8.13" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="WebCustomerTracker/web/Web" />
