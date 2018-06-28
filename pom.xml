@@ -10,7 +10,8 @@
 
 
     <properties>
-        <springversion>5.0.6.RELEASE</springversion>
+        <springversion>5.0.7.RELEASE</springversion>
+        <spring.security.version>5.0.6.RELEASE</spring.security.version>
     </properties>
 
 
@@ -63,6 +64,11 @@
             <artifactId>hibernate-core</artifactId>
             <version>5.3.0.Final</version>
         </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>6.0.10.Final</version>
+        </dependency>
 
         <dependency>
             <groupId>com.mchange</groupId>
@@ -86,6 +92,11 @@
             <artifactId>spring-orm</artifactId>
             <version>${springversion}</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>${springversion}</version>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework</groupId>
@@ -104,12 +115,45 @@
             <version>1.8.13</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>${spring.security.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>${spring.security.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-tagLibs</artifactId>
+            <version>${spring.security.version}</version>
+        </dependency>
+
 
 
 
 
 
     </dependencies>
+
+    <!-- Add support for Maven WAR Plugin -->
+
+    <build>
+        <finalName>crm-with-security-jdbc-encryption-authentication</finalName>
+
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <!-- Add Maven coordinates (GAV) for: maven-war-plugin -->
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>3.2.0</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 
 
 </project>
