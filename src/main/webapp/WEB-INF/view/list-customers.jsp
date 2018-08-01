@@ -21,11 +21,8 @@
 <body>
         <div id="wrapper">
             <div id="header">
-
                 <h2>CRM - Customer Relatioship Manager</h2>
-
             </div>
-
         </div>
         <div id="container">
             <div id="content">
@@ -52,9 +49,7 @@
                         <th>Email</th>
                         <%-- Only show "Action" column for managers or admin --%>
                         <security:authorize access="hasAnyRole('MANAGER', 'ADMIN')">
-
                             <th>Action</th>
-
                         </security:authorize>
                     </tr>
 
@@ -66,7 +61,6 @@
                         <c:url var="deleteLink" value="/customer/delete">
                             <c:param name="customerId" value="${tempCustomer.id}"/>
                         </c:url>
-
 
                         <tr>
                             <td>${tempCustomer.firstName}</td>
@@ -84,11 +78,9 @@
                                 </security:authorize>
                             </td>
                             </security:authorize>
-
                         </tr>
                     </c:forEach>
                 </table>
-
             </div>
         </div>
         <p></p>
@@ -96,9 +88,7 @@
         <!-- Add a logout button -->
         <form:form action="${pageContext.request.contextPath}/logout"
                    method="POST">
-
             <input type="submit" value="Logout" class="add-button" />
-
         </form:form>
 </body>
 </html>

@@ -20,22 +20,15 @@
 	<script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
-
 <body>
-
 	<div>
-		
 		<div id="loginbox" style="margin-top: 50px;"
 			class="mainbox col-md-3 col-md-offset-2 col-sm-6 col-sm-offset-2">
-			
 			<div class="panel panel-primary">
-
 				<div class="panel-heading">
 					<div class="panel-title">Register New User</div>
 				</div>
-
 				<div style="padding-top: 30px" class="panel-body">
-
 					<!-- Registration Form -->
 					<form:form action="${pageContext.request.contextPath}/register/processRegistrationForm" 
 						  	   modelAttribute="crmUser"
@@ -45,24 +38,19 @@
 					    <div class="form-group">
 					        <div class="col-xs-15">
 					            <div>
-								
 									<!-- Check for registration error -->
 									<c:if test="${registrationError != null}">
-								
 										<div class="alert alert-danger col-xs-offset-1 col-xs-10">
 											${registrationError}
 										</div>
-		
 									</c:if>
-																			
 					            </div>
 					        </div>
 					    </div>
 
 						<!-- User name -->
 						<div style="margin-bottom: 25px" class="input-group">
-							<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span> 
-							
+							<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
 							<form:input path="userName" placeholder="username" class="form-control" />
 						</div>
 
@@ -79,16 +67,10 @@
 								<button type="submit" class="btn btn-primary">Register</button>
 							</div>
 						</div>
-						
 					</form:form>
-
 				</div>
-
 			</div>
-
 		</div>
-
 	</div>
-
 </body>
 </html>

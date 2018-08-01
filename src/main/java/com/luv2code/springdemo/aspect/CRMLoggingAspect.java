@@ -36,31 +36,24 @@ public class CRMLoggingAspect {
 
     }
 
-
     @Before("forAppFlow()")
     public void before(JoinPoint joinPoint) {
-
         String theMethod = joinPoint.getSignature().toShortString();
-        myLogger.info("=======>>>>>>in @Before: calling the method: " + theMethod+ "\n\n");
-
+        myLogger.info("=======>>>>>>in @Before: calling the method: " + theMethod + "\n\n");
         Object[] args = joinPoint.getArgs();
-
-        for(Object tempArg: args) {
+        for (Object tempArg : args) {
             myLogger.info("======>>>>argument: " + tempArg);
         }
     }
 
     @AfterReturning(pointcut = "forAppFlow()", returning = "theResult")
     public void afterReturning(JoinPoint joinPoint, Object theResult) {
-
         String theMethod = joinPoint.getSignature().toShortString();
-        myLogger.info("=======>>>>>>in @AfterReturning: from the method: " + theMethod+ "\n");
+        myLogger.info("=======>>>>>>in @AfterReturning: from the method: " + theMethod + "\n");
         myLogger.info("=======>>>>>>result: " + theResult);
 
 
     }
-
-
 
 
 }

@@ -49,6 +49,4 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         jdbcUserDetailsManager.setDataSource(myDataSource);
         return jdbcUserDetailsManager;
     }
-
-
 }

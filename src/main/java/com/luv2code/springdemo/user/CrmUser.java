@@ -14,9 +14,8 @@ public class CrmUser {
 	private String password;
 	
 	public CrmUser() {
-		
-	}
 
+	}
 	public String getUserName() {
 		return userName;
 	}

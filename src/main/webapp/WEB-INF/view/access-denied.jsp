@@ -1,17 +1,16 @@
 <html>
 
-<head>
+    <head>
 	<title>luv2code - Access Denied</title>
-</head>
+    </head>
 
-<body>
+    <body>
 
-	<h2>Access Denied - You are not authorized to access this resource.</h2>
+	    <h2>Access Denied - You are not authorized to access this resource.</h2>
 
-	<hr>
-	
-	<a href="${pageContext.request.contextPath}/">Back to Home Page</a>
-	
-</body>
+	    <hr>
 
+	    <a href="${pageContext.request.contextPath}/">Back to Home Page</a>
+
+    </body>
 </html>
